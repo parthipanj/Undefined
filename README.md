@@ -1,4 +1,4 @@
-<h1>API-Style-Guide Overview</h1>
+<h1>API Style Guide Overview</h1>
 
 <table style="border: none;"><tr><td width="60%" valign="top">The Foo ecosystem is a collection of reusable services that encapsulate well-defined business capabilities. Developers are encouraged to access these capabilities through Application Programming Interfaces (APIs) that enable consistent design patterns and principles.
 <br><br>
