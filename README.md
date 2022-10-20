@@ -33,7 +33,7 @@ To request an update:
 <li> Submit a pull request to the source Repo </li>
 
 </td> <td valign="top"><h3>Navigation</h3>
-<a href="https://github.com/parthipanj/kissflow-xg/tree/master/APIStyleGuide/wiki/An-Overview-of-API-Design-Rules">An Overview of API Design and Rules</a><br>
+<a href="https://github.com/parthipanj/Workspace/wiki/An-Overview-of-API-Design-and-Rules">An Overview of API Design and Rules</a><br>
 <a href="https://github.com/parthipanj/Workspace/wiki/Styling-for-Security">Styling for Security</a><br>
 <a href="https://github.com/parthipanj/Workspace/wiki/URL-Structure">URL Structure</a><br>
 <a href="https://github.com/parthipanj/Workspace/wiki/HTTP-Headers">HTTP Headers</a><br>
