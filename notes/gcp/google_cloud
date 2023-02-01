@@ -1,0 +1,23 @@
+Cloud Console Platform
+    - Project
+    - Region & Zone
+    - Cloud shell
+        - gcloud CLI
+    - Compute Engine
+        - Virtual Machine
+        - (Firewall - Rules)
+        - Kubernetes Engine (GKE)
+            - Cluster
+                - Namespace?
+                - Node Pools
+                    - Nodes
+                        - Pods
+                            - Containers
+                            - Services
+
+
+Kubernetes
+    - Cluster
+        - Nodes (Components: kubelet, kube-proxy, Container runtime)
+            - Pods
+                - Container

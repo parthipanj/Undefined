@@ -1,0 +1,133 @@
+Getting Started with Google Cloud Learning Path
+***********************************************
+
+A Tour of Google Cloud Hands-on Labs
+------------------------------------
+A Google Cloud project is an organizing entity for your Google Cloud resources
+> https://cloud.google.com/docs/overview/#projects
+
+Google Cloud services: -> https://cloud.google.com/products#top_of_page
+- Compute?
+- Storage
+- Networking
+- Cloud Operations
+- Tools
+- Big Data
+- Artificial Intelligence
+
+API: -> https://developers.google.com/apis-explorer/#p/
+
+
+
+Google Cloud Fundamentals: Core Infrastructure
+**********************************************
+
+Introducting Google Cloud
+-------------------------
+IaaS ->
+PaaS ->
+
+Resources and Access in the Cloud
+---------------------------------
+Organization node -> Folder -> Project -> Resources
+Service account!
+
+Virtual Machines and Networks in the Cloud
+------------------------------------------
+Compute Engine
+Virtual Private Cloud (VPC)
+Cloud Load Balancing
+Cloud DNS
+Cloud CDN
+
+Points:-
+- Compute engine will manage Virtual Machines
+- VPC can be assigned to resources (like VM, etc...)
+- IP address to domain lookup
+
+Region & Zones: https://cloud.google.com/compute/docs/regions-zones/
+
+
+Q:
+- Can the VM moved to a new zone or region
+- SSH connection from outside
+- When will gcloud command line tool will be useful to create a VM
+
+
+Command line tool for Google cloud shell is `gcloud`
+Cloud Shell Commands
+--------------------
+Config
+------
+gcloud config set <<>> # Set config, like region, zone
+gcloud config get-value <<>> # Get config, like region, zone
+gcloud config list
+
+Components
+----------
+gcloud components list
+
+Compute
+gcloud compute project-info describe --project $(gcloud config get-value project) # To get project details
+gcloud compute instances create <<VM_name>> <<config>> # VM creation
+gcloud compute ssh gcelab2 --zone $ZONE
+gcloud compute firewall-rules list
+gcloud compute instances add-tags gcelab2 --tags http-server,https-server
+gcloud compute firewall-rules create default-allow-http --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:80 --source-ranges=0.0.0.0/0 --target-tags=http-server
+gcloud compute firewall-rules list --filter=ALLOW:'80'
+curl http://$(gcloud compute instances list --filter=name:gcelab2 --format='value(EXTERNAL_IP)')
+
+Logging
+-------
+gcloud logging logs list
+gcloud logging logs list --filter="compute"
+gcloud logging read "resource.type=gce_instance" --limit 5
+
+Cluster
+-------
+- gcloud container clusters create --machine-type=e2-medium --zone=us-west4-a lab-cluster  # Create cluster
+- gcloud container clusters get-credentials lab-cluster  # Authenticate with the cluster
+- gcloud container clusters delete lab-cluster # Delete a cluster
+kubectl
+-------
+- kubectl create deployment hello-server --image=gcr.io/google-samples/hello-app:1.0 # Create deployment
+- kubectl expose deployment hello-server --type=LoadBalancer --port 8080  # Create service
+- kubectl get service
+
+
+GKE
+- Provides - Load balancing, Node pools, Automatic scaling, Automatic upgrades, Node auto-repair, Logging and Monitoring
+- A cluster consists of at least one cluster master machine and multiple worker machines called nodes.
+ Nodes are Compute Engine virtual machine (VM) instances that run the Kubernetes processes necessary to make them part of the cluster.
+
+- GKE uses Kubernetes objects to create and manage your cluster's resources.
+ Kubernetes provides the Deployment object for deploying stateless applications like web servers.
+ Service objects define rules and load balancing for accessing your application from the internet.
+
+
+Cluster
+Namespace
+Node poll
+Node
+Pod
+Deployment
+Service
+
+
+kubectl
+-------
+--> kubectl get
+--> kubectl describe
+
+- Cluster           -> cluster-info
+- Node              -> get nodes
+                    -> describe nodes <<node_name>>
+- Service           -> get services
+- Pod               -> get pods
+                    -> describe pods <<pod_name>>
+- Deployment        -> get deployments
+- PersistentVolumes -> get pv
+- Configmap         -> get configmap
+- Secret            -> get secret
+- Events            -> get events
+- Logs              -> logs <<pod_name>>
