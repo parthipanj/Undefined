@@ -1,0 +1,15 @@
+{
+  "GroupBy": {
+    "Row": {
+      "Id": "_current_step_name",
+      "IsInternal": false,
+      "IsSystemField": true,
+      "Model": "ProjectFlowInstance",
+      "Name": "Step",
+      "Required": false,
+      "TableModelId": "ProjectFlowInstance",
+      "Type": "Text",
+      "Widget": null
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "GroupBy": {
+    "Row": {
+      "Id": "_current_state_name",
+      "IsInternal": false,
+      "IsSystemField": true,
+      "Model": "ProjectFlowInstance",
+      "Name": "State",
+      "Required": false,
+      "TableModelId": "ProjectFlowInstance",
+      "Type": "Text",
+      "Widget": null
+    }
+  }
+}
