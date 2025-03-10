@@ -1,0 +1,188 @@
+Django REST Framework
+---------------------
+
+http://www.django-rest-framework.org/#requirements
+
+http://www.django-rest-framework.org/tutorial/quickstart/
+
+# Create the project directory
+mkdir tutorial
+cd tutorial
+
+# Create a virtualenv to isolate our package dependencies locally
+virtualenv env
+virtualenv verizondocker3.6 -p /usr/bin/python3.6 
+source env/bin/activate  # On Windows use `env\Scripts\activate`
+
+# Install Django and Django REST framework into the virtualenv
+pip install django
+pip install djangorestframework
+pip install markdown       # Markdown support for the browsable API.
+pip install django-filter  # Filtering support
+pip install pygments
+pip install mongoengine
+#pip install django-rest-framework-mongoengine
+pip freeze
+
+# Set up a new project with a single application
+django-admin.py startproject tutorial .  # Note the trailing '.' character
+cd tutorial
+django-admin.py startapp quickstart
+cd ..
+pip install -r requirements.txt
+pip freeze > requirements.txt
+Migrate:
+python manage.py migrate
+
+python manage.py createsuperuser --email admin@example.com --username admin
+
+Run Server:
+python manage.py runserver 8080
+
+rm -f db.sqlite3
+rm -r snippets/migrations
+python manage.py makemigrations snippets
+python manage.py migrate
+
+When somebody requests a page from your website – say, “/polls/34/”, Django will load the mysite.urls Python module because it’s pointed to by the ROOT_URLCONF setting. It finds the variable named urlpatterns and traverses the patterns in order. After finding the match at 'polls/', it strips off the matching text ("polls/") and sends the remaining text – "34/" – to the ‘polls.urls’ URLconf for further processing. There it matches '<int:question_id>/', resulting in a call to the detail() view like so:
+
+
+Packages/Apps:
+	- django
+	- djangorestframework
+	- pygments
+	- mysqlclient
+	- Pillow	# Python Imaging Library
+
+http://www.cdrf.co/
+
+Imports:
+	- django.http import HttpResponse, JsonResponse, Http404
+		- HttpResponse
+		- JsonResponse
+		- Http404
+
+	- django.views.decorators.csrf import csrf_exempt
+		- csrf_exempt
+
+	- rest_framework import serializers, status, mixins, generics, permissions
+		- serializers
+		- status
+		- mixins
+			- ListModelMixin
+			- CreateModelMixin
+			- RetrieveModelMixin
+			- UpdateModelMixin
+			- DestroyModelMixin
+		- generics
+			- GenericAPIView: to provide the core functionality, and adding in mixins to provide the .list(), .create(), .retrieve(), .update() and .destroy() actions.
+		- permissions
+		
+	- rest_framework.decorators import api_view
+		- api_view: The @api_view decorator for working with function based views.
+
+	- rest_framework.views import APIView
+		- APIView: The APIView class for working with class-based views.
+
+	- rest_framework.renderers import JSONRenderer
+		- JSONRenderer 
+
+	- rest_framework.parsers import JSONParser
+		- JSONParser
+
+	- rest_framework.response import Response
+		- Response
+
+	- rest_framework.urlpatterns import format_suffix_patterns
+		- format_suffix_patterns
+
+
+Ways of implementing API:
+- function based views
+- class-based views
+- using mixins
+- generic class-based views
+
+
+request
+	- .data
+	- .query_params
+	- .parsers
+	- .user
+	- .auth
+	- .authenticators
+	- .method
+	- .content_type
+	- .stream
+	- .META
+	- .session
+
+
+https://www.django-rest-framework.org/api-guide/views/
+.check_permissions(self, request)
+
+
+
+Check:
+- use of @api_view() and APIView
+
+
+MySQL
+Package: pip install mysqlclient
+
+Settings:
+'default': {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'django_rest_service',
+    'USER': 'root',
+    'PASSWORD': 'root',
+    'OPTIONS': {
+        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  # https://docs.djangoproject.com/en/3.0/ref
+        # /databases/#setting-sql-mode
+    }
+}
+
+
+Ways of Integration
+Models:
+	- Base Class: models.Model (django.db.models)
+	- Fields: models.CharField, .BooleanDield, etc...
+	- Meta class
+
+Serializer:
+	- Using serializers.Serializer
+		- Base Class: serializers.Serializer (rest_framework.serializers)
+		- With the serializers.Serializer, we need to define the model fileds maually with ih the class	
+	- Using serializers.ModelSerializers
+		- Base Class: serializers.ModelSerializers (rest_framework.serializers)
+		- In this case no need to mention the Model fields
+		- Need to mention the Model and list of fields name in the Meta class
+
+Request & Response:
+	- Serialize the response with JSONRenderer(), and desreialize with io.BytesIO and JSONParser()
+	- JsonResponse() to return the serialized data
+	- using Response (rest_framework.response) 
+
+Views:
+	- Regular Views: Functional API views
+	- With @api_view decorator for working with function based views
+	- Class-based Views: 
+		- Base class APIView (rest_framework.views)
+			- The 'APIView' is extending the 'View' class of django
+	- Using Mixins 
+		- mixins class will have implemented functions
+			- classes are, CreateModelMixin, ListModelMixin, RetrieveModelMixin, UpdateModelMixin, DestroyModelMixin, 
+		- generics class will have inherited the APIView and some additional features like queryset, serializer as configuration
+	- Using Generic class-based views
+		- The generic based class will have the combination of Mixin classes
+			- Ex: ListCreateAPIView will have inherited the ListModelMixin and CreateModelMixin and APIView
+	- Using ViewSets
+		- viewset have the class ModelViewSet (CRUD), ReadOnlyModelViewSet (Get, List),
+
+	Note: ViewSet -> GenericAPIView -> APIView -> View 
+	
+URLS:
+	- using 'path' to  define the url path and use 'include' in the project url
+	- format_suffix_patterns to handle the .json and .api in the URL
+	- Using Class based view which inherited the APIView as .as_view() function
+	- Using Routers 

@@ -1,0 +1,70 @@
+Django
+
+Pre-Setup
+---------
+Install Python    	: https://www.python.org/downloads/
+Create Virtualenv 	: https://virtualenv.pypa.io/en/latest/
+Install Django		: https://docs.djangoproject.com/en/3.0/intro/install/
+
+Project Ssetup
+--------------
+- django-admin startproject <<PROJECT_NAME>> 	# To create a new django project
+	- django-admin startproject <<PROJECT_NAME>> .  # Note the trailing '.' character
+- python manage.py runserver					# To start the development server
+- python manage.py startapp <<APP_NAME>>		# To create a new app with basic directory structure
+
+
+Steps to Understand:
+- https://docs.djangoproject.com/en/3.0/intro/tutorial01/
+
+
+Remember
+- design-philosophies: https://docs.djangoproject.com/en/3.0/misc/design-philosophies/
+- django-admin and manage.py: https://docs.djangoproject.com/en/3.0/ref/django-admin/
+- settings: https://docs.djangoproject.com/en/3.0/topics/settings/
+- urls: https://docs.djangoproject.com/en/3.0/ref/urls/
+- F() expressions: https://docs.djangoproject.com/en/3.0/ref/models/expressions/#f-expressions
+- * Models: https://docs.djangoproject.com/en/3.0/topics/db/models/#module-django.db.models
+- * Managers: https://docs.djangoproject.com/en/3.0/topics/db/managers/#managers
+- * Making queries: https://docs.djangoproject.com/en/3.0/topics/db/queries/
+- Templates: https://docs.djangoproject.com/en/3.0/topics/templates/
+- Race conditions: https://docs.djangoproject.com/en/3.0/ref/models/expressions/#avoiding-race-conditions-using-f
+
+django imports
+- django.http import HttpResponse, HttpResponseRedirect
+- django.urls import path, include, reverse
+	- path: params (route, view, name)
+	- include: params (arg: app urls)
+- django.db import models
+	- models import F
+- django.template import loader
+- django.shortcuts import render, get_object_or_404
+- django.views import generic
+- django.test import TestCase
+
+Methods
+* django.db.models.Model
+	- save() -> Model.save(force_insert=False, force_update=False, using=DEFAULT_DB_ALIAS, update_fields=None)
+	- https://docs.djangoproject.com/en/3.0/ref/models/instances/#saving-objects
+
+Commands:
+- python manage.py check, python manage.py check <<app_label>>... -> Uses the system check framework to inspect the entire Django project for common problems.
+- python manage.py migrate -> Synchronizes the database state with the current set of models and migrations
+- python manage.py makemigrations <<app_label>>... -> Creates new migrations based on the changes detected to your models
+- python manage.py sqlmigrate <<app_label>> <<migration_name>> Prints the SQL for the named migration.
+- python manage.py shell -> # https://docs.djangoproject.com/en/3.0/intro/tutorial02/#playing-with-the-api
+- python manage.py createsuperuser -> Creates a superuser account (a user who has all permissions).
+- coverage run --source='.' manage.py test <<app_label>> -> is a tool for measuring code coverage of Python programs
+- coverage report
+
+
+URL:
+When somebody requests a page from your website – say, “/polls/34/”, Django will load the mysite.urls Python module because it’s pointed to by the ROOT_URLCONF setting. It finds the variable named urlpatterns and traverses the patterns in order.
+
+Template:
+Your project’s TEMPLATES setting describes how Django will load and render templates. The default settings file configures a DjangoTemplates backend whose APP_DIRS option is set to True. By convention DjangoTemplates looks for a “templates” subdirectory in each of the INSTALLED_APPS.
+
+
+Ref:
+https://micropyramid.com/blog/how-to-add-a-custom-managers-in-django/
+https://docs.djangoproject.com/en/1.8/topics/db/managers/

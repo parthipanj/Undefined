@@ -1,0 +1,11 @@
+RabbitMQ
+********
+
+rabbitmq-plugins enable rabbitmq_management
+
+rabbitmqctl add_user myUser myPass
+rabbitmqctl set_user_tags myUser administrator
+rabbitmqctl set_permissions -p / username ".*" ".*" ".*"
+
+
+https://www.howtoinstall.co/en/ubuntu/xenial/rabbitmq-server?action=remove

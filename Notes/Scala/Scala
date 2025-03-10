@@ -1,0 +1,92 @@
+Scala
+-----
+sudo apt-get install scala
+
+https://docs.scala-lang.org/
+https://docs.scala-lang.org/cheatsheets/index.html
+
+https://nordicapis.com/8-frameworks-to-build-a-web-api-in-scala/
+https://docs.scala-lang.org/cheatsheets/index.html
+https://www.scala-exercises.org/scala_tutorial/terms_and_types
+
+*************************
+Values
+------
+val name: Type = ???
+
+val can't reassign
+
+*************************
+Variables
+---------
+var name: Type = ???
+
+var can be reassign
+
+*************************
+Blocks {}
+------
+
+*************************
+Functions
+---------
+Params => Expression
+val function_val_name = (Params) => Expression
+
+*************************
+Methods
+-------
+def name(): Type = ???
+def name()(): Type = ???
+
+*************************
+Classes
+-------
+class name() {
+
+}
+
+*************************
+Case Classes
+------------
+case class name() {}
+
+*************************
+Objects
+-------
+object name {}
+
+object_name.function_name()
+
+*************************
+Traits
+------
+trait name {}
+
+**************************
+Unified Types
+-------------
+Any -> AnyVal, AnyRef
+AnyVal -> Double, Float, Long, Int, Short, Byte, Unit, Boolean, Char
+AnyRef -> List, Option, YourClass -> Null
+AnyVal & Null -> Nothing
+
+Any has equals, hashCode, and toString methods
+
+
+
+[.]
+Seq
+type
+
+
+for
+case 
+case
+case class
+methods
+type
+_
+abstract, trait
+List , Set, Option, Map, Tuple
+

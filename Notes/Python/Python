@@ -1,0 +1,335 @@
+Python
+****** 
+
+Study
+-----
+1) https://docs.python.org/3/library/index.html#the-python-standard-library
+2) https://docs.python.org/3/library/index.html#the-python-standard-library
+3) https://docs.python.org/3/reference/index.html#reference-index
+4) http://www.openbookproject.net/thinkcs/python/english2e/ch01.html *
+5) https://python.swaroopch.com/ *
+
+https://www.edureka.co/data-science-python-certification-course
+
+Interview Questions
+https://www.techbeamers.com/python-interview-questions-experienced/
+https://www.guru99.com/python-interview-questions-answers.html
+https://www.edureka.co/blog/interview-questions/python-interview-questions/
+
+Exercise
+--------
+- https://realpython.com/quizzes/
+- https://www.practicepython.org/
+- https://pynative.com/python-basic-exercise-for-beginners/
+- https://www.hackerrank.com/domains/python
+
+Others
+https://www.netguru.com/blog/python-pros-and-cons
+https://sites.google.com/site/mindfirellcblog/why-is-python-so-popular-despite-of-being-so-slow
+https://x-team.com/blog/best-python-frameworks-for-web-development-and-data-science/
+https://pypi.org/project/memory-profiler/
+
+Topics
+------
+- Dynamic Typing
+- Interpreted Language
+- Rapid Application Development (RAD)
+- Immutable & Mutable
+
+Basic Information
+-----------------
+- Sequence Types: list, tuple, range
+- Mapping Types: dict 
+
+Advantages
+----------
+- suitable as an extension language for customizable applications;
+- the high-level data types allow you to express complex operations in a single statement;
+- statement grouping is done by indentation instead of beginning and ending brackets;
+- no variable or argument declarations are necessary.
+- Python is extensible
+- write throw-away programs, or to test functions during bottom-up program development
+
+Topics Explanation
+------------------
+
+Type System
+-----------
+- Two types
+	- Static typing		-> compile-time (ex: C, C++, Java, Typescript, Scala)
+	- Dynamic typing	-> run-time	(ex: Python, Perl, JavaScript)
+- Ref: https://www.sitepoint.com/typing-versus-dynamic-typing/#:~:text=A%20lot%20of%20people%20define,is%20done%20at%20run%2Dtime.
+- For Python: http://pychecker.sourceforge.net/ 
+
+Interpreted Language
+--------------------
+- An interpreted language is a type of programming language for which most of its implementations execute instructions directly and freely, without previously compiling a program into machine-language instructions
+- In computer science, an interpreter is a computer program that directly executes instructions written in a programming or scripting language, without requiring them previously to have been compiled into a machine language program.
+
+Rapid Application Development (RAD)
+-----------------------------------
+- RAD approaches to software development put less emphasis on planning and more emphasis on an adaptive process. Prototypes are often used in addition to or sometimes even in place of design specifications.
+- happening in a short time or at a great rate.
+
+Numbers
+-------
+-> +, -, * and /
+-> parentheses (()) can be used for groupin
+-> division always returns a floating point number (Ex: 8 / 5 -> 1.6)
+-> // floor division discards the fractional part (Ex: 8 // 5 -> 1)
+-> ** for power (Ex: 5 ** 2 -> 25)
+-> % for remainser of the division (Ex: 8 % 5 -> 3)
+-> _ the last printed expression is assigned to the variable _
+-> Types: int, float, decimal, fraction
+
+Strings
+-------
+-> enclosed in single quotes ('...') or double quotes ("...") with the same result
+-> \ can be used to escape quotes
+-> \n means newline
+-> can use raw strings by adding an r before the first quote
+-> String literals can span multiple lines. One way is using triple-quotes: \"""...\""" or '''...'''
+-> Strings can be concatenated (glued together) with the + operator, and repeated with *
+-> Strings can be indexed (subscripted), with the first character having index 0
+-> slicing
+-> In slicing, start is always included, and the end always excluded. This makes sure that s[:i] + s[i:] is always equal
+ to s
+-> The built-in function len() returns the length of a string
+
+List
+----
+-> compound data type, used to group together other values
+-> Like strings (and all other built-in sequence types), lists can be indexed and sliced
+-> Unlike strings, which are immutable, lists are a mutable type, i.e. it is possible to change their content
+-> Methods: append(), 
+-> The built-in function len() also applies to lists
+-> append(x): Add an item to the end of the list. Equivalent to a[len(a):] = [x]
+-> extend(iterable): Extend the list by appending all the items from the iterable. Equivalent to a[len(a):] = iterable
+-> insert(i, x): Insert an item at a given position. a.insert(len(a), x) is equivalent to a.append(x)
+-> remove(x): Remove the first item from the list whose value is equal to x
+-> pop([i]): Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and returns the last item in the list
+-> clear(): Remove all items from the list. Equivalent to del a[:]
+-> index(x[, start[, end]]): Return zero-based index in the list of the first item whose value is equal to x
+-> count(x): Return the number of times x appears in the list.
+-> sort(key=None, reverse=False): Sort the items of the list in place
+-> reverse(): Reverse the elements of the list in place
+-> copy(): Return a shallow copy of the list. Equivalent to a[:]
+-> Used to make Stack and Queue (using the collections.deque)
+
+Tuples and Sequences
+--------------------
+-> A tuple consists of a number of values separated by commas
+-> Tuples are immutable. but they can contain mutable objects
+-> Tuples are immutable, and usually contain a heterogeneous sequence of elements that 
+are accessed via unpacking or indexing
+
+Sets
+----
+-> A set is an unordered collection with no duplicate elements
+-> Set objects also support mathematical operations like union, intersection, difference, and symmetric difference.
+-> Curly braces or the set() function can be used to create sets
+-> To create an empty set you have to use set(), not {}
+
+Dictionaries
+------------
+-> Dictionaries are sometimes found in other languages as “associative memories” or “associative arrays”
+-> Unlike sequences, which are indexed by a range of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be keys
+-> A dictionary is a set of key: value pairs
+-> The main operations on a dictionary are storing a value with some key and extracting the value given the key
+
+Functions
+---------
+-> The execution of a function introduces a new symbol table used for the local variables of the function. More precisely, all variable assignments in a function store the value in the local symbol table; whereas variable references first look in the local symbol table, then in the local symbol tables of enclosing functions, then in the global symbol table, and finally in the table of built-in names.
+-> / and * in function arguments. / is for positional aruments. * is to make sure the keyword arguments
+
+Modules
+-------
+-> A module is a file containing Python definitions and statements
+-> Within a module, the module’s name (as a string) is available as the value of the global variable __name__
+-> Each module has its own private symbol table, which is used as the global symbol table by all functions defined in the module.
+-> importlib.reload(): to test interactively
+-> The Module Search Path
+	- When a module named spam is imported, the interpreter first searches for a built-in module with that name. 
+	- If not found, it then searches for a file named spam.py in a list of directories given by the variable sys.path.
+	- sys.path is initialized from these locations:
+		* The directory containing the input script (or the current directory when no file is specified).
+		* PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).
+		* The installation-dependent default.
+-> To speed up loading modules, Python caches the compiled version of each module in the __pycache__ directory under the name module.version.pyc
+-> Python checks the modification date of the source against the compiled version to see if it’s out of date and needs to be recompiled.
+-> You can use the -O or -OO switches on the Python command to reduce the size of a compiled module
+-> Standard Modules
+	- system calls
+	- the set of such modules is a configuration option which also depends on the underlying platform
+-> The built-in function dir() is used to find out which names a module defines
+
+Packages
+--------
+-> Packages are a way of structuring Python’s module namespace by using “dotted module names”.
+-> When importing the package, Python searches through the directories on sys.path looking for the package subdirectory
+-> The __init__.py files are required to make Python treat directories containing the file as packages
+-> The import statement first tests whether the item is defined in the package; if not, it assumes it is a module and attempts to load it.
+-> If a package’s __init__.py code defines a list named __all__, it is taken to be the list of module names that should be imported when from package import * is encountered
+-> If __all__ is not defined, the statement from sound.effects import * does not import all submodules from the package
+-> relative imports
+
+Input and Output
+----------------
+-> Two ways of writing values: expression statements and the print() function.
+-> A third way is using the write() method of file objects; the standard output file can be referenced as sys.stdout
+-> Formatted String Literals
+	- Passing an integer after the ':' will cause that field to be a minimum number of characters wide
+	- Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii(), '!s' applies str(), and '!r' applies repr()
+-> Reading and Writing Files
+	- open() returns a file object, and is most commonly used with two arguments: open(filename, mode)
+	- The first argument is a string containing the filename
+	- The second argument is another string containing a few characters describing the way in which the file will be used
+	- 'r' when the file will only be read, 'w' for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode argument is optional; 'r' will be assumed if it’s omitted.
+	- It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly closed after its suite finishes, even if an exception is raised at some point
+-> pickle — Python object serialization
+
+Errors and Exceptions
+---------------------
+-> Errors detected during execution are called exceptions and are not unconditionally fatal
+-> sys.exc_info(): to get the exception details
+-> The try … except statement has an optional else clause, which, when present, must follow all except clauses
+-> he except clause may specify a variable after the exception name. The variable is bound to an exception instance with the arguments stored in instance.args
+-> The raise statement allows the programmer to force a specified exception to occur
+-> User-defined Exceptions
+	- Exceptions should typically be derived from the Exception class, either directly or indirectly.
+-> The try statement has another optional clause which is intended to define clean-up actions that must be executed under all circumstances
+
+Classes
+-------
+-> Classes provide a means of bundling data and functionality together
+-> Creating a new class creates a new type of object, allowing new instances of that type to be made. Each class instance can have attributes attached to it for maintaining its state
+-> the class inheritance mechanism allows multiple base classes, a derived class can override any methods of its base class or classes, and a method can call the method of a base class with the same name
+-> classes themselves are objects
+-> Python Scopes and Namespaces
+	- A namespace is a mapping from names to objects
+	- he local namespace for a function is created when the function is called, and deleted when the function returns or raises an exception that is not handled within the function
+	- A scope is a textual region of a Python program where a namespace is directly accessible.
+	- The global statement can be used to indicate that particular variables live in the global scope and should be rebound there
+	- The nonlocal statement indicates that particular variables live in an enclosing scope and should be rebound there
+-> Class definitions, like function definitions (def statements) must be executed before they have any effect.
+-> Class objects support two kinds of operations: attribute references and instantiation
+-> Class instantiation uses function notation
+-> class instantiation automatically invokes __init__() for the newly-created class instance
+-> classes are not usable to implement pure abstract data types
+-> nothing in Python makes it possible to enforce data hiding — it is all based upon convention
+-> isinstance() to check an instance’s type
+-> issubclass() to check class inheritance
+
+Build-in Functions
+------------------
+- print()
+- len() -> Return the length (the number of items) of an object. sequence (such as a string, bytes, tuple, list, or range) or a collection (such as a dictionary, set, or frozen set)
+- range() -> used for looping a specific number of times in for loops
+- sum() -> Sums start and the items of an iterable from left to right and returns the total
+- list() -> to construct list 
+- map()
+- abs()
+- strip()
+- round()
+- str()
+- zip()
+- set()
+- sorted()
+- dict()
+- dict.items()
+- dict.keys()
+- enumerate()
+- reversed()
+- dir()
+- write()
+- str.format()
+- repr()
+- vars()
+- str.rjust()
+- str.ljust()
+- str.center()
+- str.zfill(): pads a numeric string on the left with zeros
+- int()
+- type()
+- isinstance(): to check an instance’s type
+- issubclass(): to check class inheritance
+- super()
+- help()
+
+Built-in Exceptions: https://docs.python.org/3/library/exceptions.html#bltin-exceptions
+-------------------
+-> Exception
+-> ZeroDivisionError
+-> NameError 
+-> TypeError
+-> KeyboardInterrupt
+-> ValueError
+-> NameError
+-> OSError
+
+Standard Modules
+----------------
+- winreg: module is only provided on Windows systems.	
+- builtins
+- os: module provides dozens of functions for interacting with the operating system
+	-> getcwd() # Return the current working directory
+	-> system() # Run the command in the system shell
+- shutil: For daily file and directory management tasks
+- glob: module provides a function for making file lists from directory wildcard searches
+- sys: Common utility scripts
+	-> sys.version
+	-> sys.platform
+	-> sys.path: a list of strings that determines the interpreter’s search path for modules
+	-> sys.argv
+	-> sys.ps1 & sys.ps2: only for interactive mode 
+- argparse: module provides a more sophisticated mechanism to process command line arguments
+- re: module provides regular expression tools for advanced string processing
+- math: module gives access to the underlying C library functions for floating point math
+- random: module provides tools for making random selections
+- statistics: module calculates basic statistical properties (the mean, median, variance, etc.) of numeric data
+- urllib.request: for retrieving data from URLs 
+- smtplib: for sending mail
+- datetime: module supplies classes for manipulating dates and times in both simple and complex ways
+- zlib, gzip, bz2, lzma, zipfile and tarfile: Common data archiving and compression formats
+- timeit: Performance Measurement
+- profile and pstats: modules provide tools for identifying time critical sections in larger blocks of code
+- doctest: module provides a tool for scanning a module and validating tests embedded in a program’s docstrings
+- unittest: module is not as effortless as the doctest module, but it allows a more comprehensive set of tests to be maintained in a separate file
+- xmlrpc.client and xmlrpc.server: modules make implementing remote procedure calls into an almost trivial task
+- email: package is a library for managing email messages, including MIME and other RFC 2822-based message documents
+- json: package provides robust support for parsing this popular data interchange forma
+- csv: module supports direct reading and writing of files in Comma-Separated Value format
+- xml: XML processing
+- sqlite3: module is a wrapper for the SQLite database library
+- gettext, locale, and the codecs: Internationalization support
+- reprlib: module provides a version of repr() customized for abbreviated displays of large or deeply nested containers
+- pprint: module offers more sophisticated control over printing both built-in and user defined objects in a way that is readable by the interpreter
+- textwrap:  module formats paragraphs of text to fit a given screen width
+- locale: module accesses a database of culture specific data formats
+- string: module includes a versatile Template class with a simplified syntax suitable for editing by end-users
+- struct: module provides pack() and unpack() functions for working with variable length binary record formats
+- threading: Threading is a technique for decoupling tasks which are not sequentially dependent
+- logging:  module offers a full featured and flexible logging system
+- weakref: module provides tools for tracking objects without creating a reference. When the object is no longer needed, it is automatically removed from a weakref table and a callback is triggered for weakref objects
+- gc: garbage collection
+- array: module provides an array() object that is like a list that stores only homogeneous data and stores it more compactly
+- collections: module provides a deque() object that is like a list with faster appends and pops from the left side but slower lookups in the middle
+- bisect: module with functions for manipulating sorted lists
+- heapq: module provides functions for implementing heaps based on regular lists
+- decimal: module offers a Decimal datatype for decimal floating point arithmetic
+
+Exercises
+---------
+- List operations (add, remove, append, reverse) using slicing
+- https://docs.python.org/3/tutorial/datastructures.html#nested-list-comprehensions
+- Module: You can use the -O or -OO switches on the Python command to reduce the size of a compiled module
+- https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
+- https://docs.python.org/3/library/pickle.html#module-pickle
+- https://docs.python.org/3/tutorial/stdlib2.html#multi-threading
+
+
+
+- Multithreading vs Multiprocessing: https://medium.com/@bfortuner/python-multithreading-vs-multiprocessing-73072ce5600b#:~:text=A%20process%20is%20an%20instance,share%20the%20same%20memory%20space.
+- https://code.activestate.com/recipes/langs/python/
+- https://medium.com/@manjuladube/encapsulation-abstraction-35999b0a3911#:~:text=A%20class%20is%20an%20example,is%20member%20functions%2Cvariables%20etc.&text=Abstraction%20is%20a%20mechanism%20which,Abstraction%3A%20%E2%80%94%20Implementation%20hiding.
+- https://www.youtube.com/watch?v=SRu1GAfr3LA

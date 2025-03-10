@@ -1,0 +1,36 @@
+MongoDB
+*******
+
+sudo rm /var/lib/mongodb/mongod.lock
+sudo service mongod restart	
+
+Step 1: Remove lock file.
+sudo rm /var/lib/mongodb/mongod.lock
+
+Step 2: Repair mongodb. 
+sudo mongod --repair 
+
+Step 3: start mongodb.
+sudo service mongod start
+
+Step 4: Check status of mongodb.
+sudo service mongod status
+
+Step 5: Start mongo console.
+mongo
+
+
+MongoDB Profiler
+----------------
+Enable
+db.setProfilingLevel(2)
+db.getProfilingStatus(2)
+
+Diable
+db.setProfilingLevel(0)
+db.system.profile.drop()
+
+Filter
+db.getCollection('system.profile').find({ ns : { $ne:'verizon_test.system.profile' }}).sort( { ts : 1 } ).pretty()
+
+.explain('executionStats');

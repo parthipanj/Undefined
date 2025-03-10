@@ -1,0 +1,34 @@
+Git
+***
+
+git init
+
+git clone ""
+
+git branch
+
+git checkout branch develop/feature
+
+git pull
+
+git add --all
+
+git rm ""
+
+git commit -m "#JIRATask   #comment some comment"
+
+git push origin feature
+
+git merge
+
+git config --global user.name
+
+git config --global user.email
+
+git config --global user.name ""
+
+git config --global user.email ""
+
+git remote -v
+
+git remote set-url origin https://ParthipanJ_Contus@bitbucket.org/Apptha/svep4154-jcb-web-mirash.git

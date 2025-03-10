@@ -1,0 +1,26 @@
+DevOps
+- DevOps is the blending of tasks performed by a company's application development and systems operations teams.
+- communication between development and operations
+- creates and maintains infrastructure
+- aligns development, quality assurance (QA) and operations team efforts
+
+Tools
+- tools include GitHub for storing code, Puppet and Chef for configuration management, Nagios for monitoring how changes to code affect the environment and Splunk for operational intelligence.
+
+- Development (Build)
+- Test Driven Development
+- Automation
+- Monitoring
+
+------------------
+Plan - Jira
+Code - Git
+Build - Maven, Gradle, Ant
+Test - Seleinium, JUnit
+
+--Integration - > Jenkins, Bamboo, Hudson
+---Deploy & operate - Docker, puppet, CHEF, Saltstack
+---Monitor - Splunk, ELK Stack, Nagios, Sensu, NewRelic
+
+--Configuration Management - Puppet, Chef, Ansible, and SaltStack.
+--Containerization - Docker

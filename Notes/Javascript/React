@@ -1,0 +1,21 @@
+React
+*****
+
+- https://reactjs.org/
+- https://reactjs.org/docs/getting-started.html
+- https://www.taniarascia.com/getting-started-with-react/
+
+Create App
+----------
+- npx create-react-app .
+
+
+dangerouslySetInnerHTML
+
+Useful Links
+------------
+https://github.com/jonschlinkert/remarkable
+
+
+Important
+- https://babeljs.io/docs/en/index.html

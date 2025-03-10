@@ -1,0 +1,61 @@
+Javascript
+**********
+
+Ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+	 https://www.tutorialsteacher.com/javascript/prototype-in-javascript
+
+JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods.
+JavaScript supports object-oriented programming with object prototypes, instead of classes. JavaScript also supports functional programming — because they are objects, functions may be stored in variables and passed around like any other object.
+
+Types:
+	- Number
+	- String
+	- Boolean
+	- Symbol (new in ES2015)
+	- Object
+	  * Function
+	  * Array
+	  * Date
+	  * RegExp
+	- null
+	- undefined
+
+Build-in Objects:
+	- Math
+	- 
+
+Build-in Functions:
+	- parseInt()
+	- parseFloat()
+	- isNaN()
+	- isFinite()
+
+Special Values:
+	- NaN
+	- Infinity & -Infinity
+
+Boolean:
+	- false, 0, empty strings (""), NaN, null, and undefined all become false.
+	- All other values become true.
+
+- If you declare a variable without assigning any value to it, its type is undefined.
+- The prototype is an object that is associated with every functions and objects by default in JavaScript, where function's prototype property is accessible and modifiable and object's prototype property (aka attribute) is not visible.
+
+Objects:
+	- JavaScript objects can be thought of as simple collections of name-value pairs. As such, they are similar to:
+		* Dictionaries in Python.
+		* Hashes in Perl and Ruby.
+		* Hash tables in C and C++.
+		* HashMaps in Java.
+		* Associative arrays in PHP.
+
+Closures:
+	- A closure is the combination of a function and the scope object in which it was created. Closures let you save state — as such, they can often be used in place of objects.
+
+Basic:
+	- Variables: var and let
+	             var hoisting
+	- Events
+
+HTML
+ -  <head>, <title>, <body>, <header>, <footer>, <article>, <section>, <p>, <div>, <span>, <img>, <aside>, <audio>, <canvas>, <datalist>, <details>, <embed>, <nav>, <output>, <progress>, <video>, <ul>, <ol>, <li> 

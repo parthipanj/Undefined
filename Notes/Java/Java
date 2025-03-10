@@ -1,0 +1,155 @@
+Java
+
+Ref
+https://www.guru99.com/java-virtual-machine-jvm.html
+https://howtodoinjava.com/
+https://howtodoinjava.com/java-collections/
+
+
+Topics
+ * JRE & JDK
+	- JRE = JVM + libraries to run Java application.
+	- JDK = JRE + tools to develop Java Application.
+	- Java Virtual machine (JVM) is the virtual machine that runs the Java bytecodes. 
+		- Class Loader (Loading, Linking, Initialization)
+		- JVM Memory Areas (Method Area, Heap, Stacks, PC register)
+		- JVM Execution Engine (interpreter and JIT compiler to convert the bytecode to machine code and execute it.)
+
+ * Garbage Collector
+	- Do not allocate excessive memory. Allocate memory only just as much needed. This is specially applicable to Java arrays.
+	- Don’t hold on to references. Once the object is used and no longer needed, assign null reference to it.
+	- Find and resolve memory leaks
+	- Do system profiling on each release to verify memory bumps
+	- Do not rely on System.gc() to run garbage collection
+
+ * Naming Convertions
+
+ * Classpath
+	- CMD: –classpath C:\dependency\framework.jar MyApp
+
+ * Variables
+	- Widening (small type value to larger type: long = int) and Narrowing (larger type value to small: byte = int)
+	- Instance variables (non-static fields) are unique to each instance of a class.
+    - Class variables (static fields) are fields declared with the static modifier; there is exactly one copy of a class variable, regardless of how many times the class has been instantiated.
+    - To access instance variable, you MUST create a new instance of class. Class variables are accessible through class reference, and do not require to create object instance.
+ * Operators
+ * Data Types
+    - primitive datatype and non-primitive datatype (or reference datatype)
+      - primitive (boolean, char, byte, short, int, long, float, and double)
+      - Non-primitive (String ...)
+    - Wrapper Classes (Boolean, Byte, Short, Character, Integer, Long, Float, and Double.) --> use???
+ * Wrapper Classes
+    - valueOf(), intValue()
+    - Auto-Boxing, UnBoxing
+
+
+* OOPS
+	- Abstraction is the process of exposing the essential details of an entity, while ignoring the irrelevant details, to reduce the complexity for the users.
+	- Encapsulation is the process of bundling data and operations on the data together in an entity.
+	- Inheritance is used to derive a new type from an existing type, thereby establishing a parent-child relationship.
+	- Polymorphism lets an entity take on different meanings in different contexts.
+* Abstraction
+ 	- interfaces and abstract classes
+
+
+ Checkout 
+  - Labeled Statement
+  - Lambda expressions
+  - Collection, Iterable, Array, List
+
+
+Use: Labeled statement, Lambda expression, Wrapper Class, instance initializer, Immutable Class, Pairs
+     javatuples package, 
+
+
+Sprin Boots
+
+Ref
+	- https://dzone.com/articles/spring-vs-spring-boot
+
+
+Build
+Maven: http://maven.apache.org/guides/introduction/introduction-to-profiles.html
+
+
+
+Spring Boot
+***********
+
+Dependency:
+	- spring-boot-starter (Core starter, including autoconfiguration support, logging and YAML)
+	- spring-boot-starter-parent
+	- spring-boot-starter-actuator (For monitor and manage our application)
+	- spring-boot-starter-web (Used to write a Rest Endpoints)
+	- spring-boot-starter-security (used for Spring Security)
+	- spring-boot-starter-test (For writing test cases)
+	- spring-boot-maven-plugin (To package the project as an executable jar)
+	- spring-boot-starter-logging (Default Logging)
+	- spring-boot-starter-log4j2 (For Logging)
+
+Annotations:
+	- @SpringBootApplication: Spring boot application entry point 
+	  its contains @SpringBootConfiguration, @EnableAutoConfiguration, @ComponentScan, @ConfigurationPropertiesScan
+	- @Configuration: Configuration class
+	- @Import: Used to import additional configuration classes
+	- @ComponentScan: To automatically pick up all Spring components, including @Configuration classes 
+	- @ImportResource: To load XML configuration files
+	- @ComponentScan: To find your beans. @Component, @Service, @Repository, @Controller are automatically registered as Spring Beans
+	- @Autowired: To do constructor injection
+
+Maven:
+  spring-boot-starter-parent will provide the below
+  	- Java 1.8
+  	- UTF-8 source encoding
+  	- Dependency management
+  	- Sensible resource filtering
+
+Q/A:
+spring-data-releasetrain ?
+
+Project Layout:
+com
+ +- example
+  +- myapplication
+  +- Application.java
+  |
+  +- customer
+  | +- Customer.java
+  | +- CustomerController.java
+  | +- CustomerService.java
+  | +- CustomerRepository.java
+  |
+  +- order
+  +- Order.java
+  +- OrderController.java
+  +- OrderService.java
+  +- OrderRepository.java
+
+Auto Configuration:
+ - @EnableAutoConfiguration
+ - To disable specific auto configuration
+   @Configuration(proxyBeanMethods = false)
+   @EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+
+
+Property:
+	- spring.autoconfigure.exclude 
+
+
+Application Events and Listeners:
+
+Externalized Configuration:
+
+
+Ref: https://www.baeldung.com/spring-properties-file-outside-jar
+     https://www.baeldung.com/spring-boot-logging
+
+
+HTTP servers: Tomcat, Jetty, Undertow, or Netty. 
+
+
+
+
+
+
+https://www.simbla.com/online-database

@@ -1,0 +1,31 @@
+Cassandra Setup
+---------------
+- DockerHub (https://hub.docker.com/_/cassandra)
+- Pull Image (docker pull cassandra)
+- Create Service (sudo docker service create --name cassandra -p 9042:9042 cassandra:latest --hostname localhost)
+
+
+CREATE KEYSPACE verte WITH replication = {'class': 'SimpleStrategy', 'replication_factor' : 3} AND durable_writes = true;
+
+CREATE CUSTOM INDEX channel_channel_name_idx ON channel ("channel_name") USING 'org.apache.cassandra.index.sasi.SASIIndex' WITH OPTIONS = {'mode': 'CONTAINS', 'analyzer_class': 'org.apache.cassandra.index.sasi.analyzer.NonTokenizingAnalyzer', 'case_sensitive': 'false'};
+
+
+Ref: https://stackoverflow.com/questions/32537977/java-net-unknownhostexception-on-docker
+Docker Init: https://github.com/docker-library/cassandra/issues/104
+https://github.com/docker-library/cassandra/issues/104
+https://github.com/docker-library/cassandra/issues/104
+https://medium.com/@mustwin/cassandra-from-a-relational-world-7bbdb0a9f1d
+https://dba.stackexchange.com/questions/136668/cassandra-one-to-many-table-design/136669
+https://stackoverflow.com/questions/45021003/what-is-the-optimal-way-to-model-one-to-many-relationships-in-cassandra
+https://www.datastax.com/blog/2015/02/basic-rules-cassandra-data-modeling
+https://dzone.com/articles/cassandra-counter-columns-and-tables
+
+Cassandra Search:
+https://stackoverflow.com/questions/11681522/wildcard-search-in-cassandra-database
+https://www.quora.com/What-is-the-best-tool-for-search-on-Apache-Cassandra-Database-Stargate-or-Cassandra-Lucene-Index-or-Cassndra-and-Apache-Solr-in-different-cluster
+https://stackoverflow.com/questions/50431759/how-to-search-in-cassandra-case-insensitive
+https://stackoverflow.com/questions/18444567/cassandra-cql-wildcard-search
+
+Working:
+https://stackoverflow.com/questions/49247092/order-by-and-like-in-same-cassandra-query
+SASI: https://docs.datastax.com/en/dse/6.0/cql/cql/cql_reference/cql_commands/cqlCreateCustomIndex.html

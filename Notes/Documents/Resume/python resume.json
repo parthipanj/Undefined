@@ -1,0 +1,189 @@
+{
+  "selectedTemplate": 2,
+  "headings": {
+    "awards": "",
+    "education": "Education",
+    "work": "Experience",
+    "skills": "Skills",
+    "projects": "Projects"
+  },
+  "basics": {
+    "name": "Parthipan J",
+    "email": "parthij15@gmail.com",
+    "phone": "8675540893",
+    "location": {
+      "address": "Chennai"
+    }
+  },
+  "education": [
+    {
+      "studyType": "MCA",
+      "endDate": "2016",
+      "institution": "Sri Venkateswara College of Engineering (SVCE)",
+      "location": "Sriperumbudur",
+      "area": "Computer Science",
+      "gpa": "8.09",
+      "startDate": "2013"
+    },
+    {
+      "institution": "VHNSN, Madurai Kamaraj University",
+      "location": "Virudhunagar",
+      "studyType": "BCA",
+      "area": "Computer Science",
+      "gpa": "6.73",
+      "startDate": "2010",
+      "endDate": "2013"
+    },
+    {}
+  ],
+  "work": [
+    {
+      "company": "CONTUS",
+      "location": "Chennai",
+      "position": "Senior Application Developer ",
+      "website": "",
+      "startDate": "Nov 2016",
+      "highlights": [
+        null,
+        null,
+        "Plan, develop and implement successful large-scale projects from conception to completion",
+        "Ability to understand/comment on functional requirements and design documents",
+        "Involved in analysis, design, and development, customization, testing and troubleshooting",
+        "Project handling on all phases of the development life cycle, from analysis to deployment on the production environment, to post-release support",
+        "Communicating with the client team, mobile and web team for the development, integration and troubleshooting",
+        null,
+        null
+      ],
+      "endDate": "Present"
+    }
+  ],
+  "skills": [
+    {
+      "level": "",
+      "keywords": [
+        "Python"
+      ],
+      "name": "Programming Languages"
+    },
+    {
+      "keywords": [
+        "MongoDB",
+        null,
+        "MySQL",
+        "Elasticsearch "
+      ],
+      "name": "Databases"
+    },
+    {
+      "keywords": [
+        "Django REST",
+        null
+      ],
+      "name": "Framework"
+    },
+    {
+      "keywords": [
+        "Apache Kafka",
+        null,
+        null
+      ],
+      "name": "Streaming Technologies"
+    },
+    {
+      "keywords": [
+        null
+      ]
+    },
+    {
+      "keywords": [
+        "Docker",
+        null,
+        null,
+        "JIRA",
+        "GIT"
+      ],
+      "name": "DevOps Tools"
+    }
+  ],
+  "projects": [
+    {
+      "name": "HAIL: Multimodal Journey Planner (Ford)",
+      "keywords": [
+        "Python",
+        "Java",
+        "Elasticsearch",
+        "Cosmos DB",
+        "Microsoft SQL Server",
+        null,
+        null,
+        null,
+        null
+      ],
+      "description": "Multimodal journey planner (MMJP) allows passengers to find the best solution for each trip, with the assurance of being guided to their destination."
+    },
+    {
+      "keywords": [
+        null
+      ]
+    },
+    {
+      "keywords": [
+        "Python",
+        "Apache Kafka",
+        "Apache Spark",
+        null
+      ],
+      "name": "IoT Engine",
+      "description": "IoT Engine will monitor the sensor device process and send an alert every time a problem occurs during this process. Monitoring systems and sensors will help with solving these problems and to make data-informed decisions and take corrective actions to avoid damaging.  The use of sensors will greatly improve the quality and speed of the production process, the same IoT engine will read sensor metrics data and update it into the monitoring system within a short span of time."
+    },
+    {
+      "keywords": [
+        "Python",
+        "MongoDB",
+        "Apache Kafka"
+      ],
+      "name": "Versa Titan  (SD-WAN)",
+      "description": "Versa Titan is a Cloud Managed SD-WAN & SD-Security solution that provides IT with cloud-agility, simplifying the design, deployment, and operations of WAN. Developing a Network Device with software to control the entire branch network LAN, WAN, Enable security and monitoring."
+    },
+    {
+      "keywords": [
+        "React",
+        "Lumen",
+        "MySQL"
+      ],
+      "name": "Honeycomb",
+      "description": "Honeycomb is to develop a mobile application that acts as a secured platform for money transactions between the app users. Users can add money to their wallet, and use it for their transactions. The app will be supporting English and Arabic language."
+    },
+    {
+      "keywords": [
+        null
+      ]
+    },
+    {
+      "keywords": [
+        "Laravel",
+        "AngularJS",
+        "MySQL "
+      ],
+      "name": "JCB Smart App",
+      "description": "JCB India intends to use Smart Phone apps as an effective tool for their BHL Machine. Dealers/Sales and Marketing team will be using the JCB App to Diagnose and Demonstrate their offerings."
+    }
+  ],
+  "awards": [
+    {
+      "title": "",
+      "date": "",
+      "awarder": "",
+      "summary": ""
+    }
+  ],
+  "sections": [
+    "templates",
+    "profile",
+    "skills",
+    "work",
+    "projects",
+    "education",
+    "awards"
+  ]
+}

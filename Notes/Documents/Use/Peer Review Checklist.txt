@@ -1,0 +1,37 @@
+Peer Review Checklist
+
+Follow GitPeer Review
+Functional Review
+	Required functionality is achived as mentioned in the Acceptance criteria
+	
+Structural Review
+	code structure
+	Code Formatting
+	Spelling mistakes
+	Naming convetions
+
+Code review
+	Code Components(code and test cases) review
+	Design pattern
+	Logic review
+	Coding Bestpractices Followed
+	https://it1.spt.ford.com/sites/ForumITBrazil/Wiki/Pages/JCOE.aspx
+	
+Test Case review
+	Unit test cases
+		Contract test cases
+		Servcie Tets cases
+		Controller Test cases
+		Repository test cases
+	Integration test cases
+	Acceptance test cases
+	Positive, Neegative, Exception Test cases for the functinality.
+	
+Logging Review
+	Proper Error logging, Info and Debug whereever required
+	
+Documentation Review
+	Swagger documnets must be reviewed for 
+		Endpoints
+		Contracts
+	Code and logics written must have method/block level comments whereever required.
