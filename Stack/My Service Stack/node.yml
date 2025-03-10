@@ -1,0 +1,39 @@
+version: "3.7"
+services:
+  node:
+    image: <<NODE_APPLICATION_IMAGE>>
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: any
+        delay: 1s
+        max_attempts: 3
+        window: 60s
+    volumes:
+      - type: volume
+        source: storage
+        target: /var/www/html
+    ports:
+      - target: 3000
+        published: 3000
+        protocol: tcp
+        mode: host
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "10"
+    environment:
+      NODE_ENV: develop
+    configs:
+      - source: node-env
+        target: /usr/app/.env
+    networks:
+      - host
+networks:
+  host:
+volumes:
+  storage:
+configs:
+  node-env:
+    file: ./config/.env

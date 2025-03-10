@@ -1,0 +1,41 @@
+version: "3.7"
+services:
+  rabbitmq:
+    image: rabbitmq:3.7.18
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: any
+        delay: 1s
+        max_attempts: 3
+        window: 60s
+    volumes:
+      - type: volume
+        source: rabbitmq
+        target: /var/lib/rabbitmq
+      - "./init/enabled_plugins:/etc/rabbitmq/enabled_plugins"
+    ports:
+      - target: 5672
+        published: 5672
+        protocol: tcp
+        mode: host
+      - target: 15672
+        published: 15672
+        protocol: tcp
+        mode: host
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "10"
+    environment:
+      RABBITMQ_DEFAULT_USER: parthi
+      RABBITMQ_DEFAULT_PASS: parthi@123
+    networks:
+      - host
+    hostname: "rabbithost"
+networks:
+  host:
+volumes:
+  cassandra:
+  rabbitmq:

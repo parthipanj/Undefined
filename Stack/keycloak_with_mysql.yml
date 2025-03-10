@@ -1,0 +1,31 @@
+version: "3.7"
+
+services:
+    keycloak:
+        image: jboss/keycloak:8.0.1
+        depends_on:
+            - mysql
+        ports:
+            - target: 8080
+              published: 8080
+        environment:
+            DB_VENDOR: MYSQL
+            DB_ADDR: mysql
+            DB_DATABASE: keycloak
+            DB_USER: keycloak
+            DB_PASSWORD: password
+            KEYCLOAK_USER: parthi
+            KEYCLOAK_PASSWORD: parthi
+    mysql:
+        image: mysql:8.0.18
+        volumes:
+          - type: volume
+            source: mysql
+            target: /var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: keycloak
+            MYSQL_USER: keycloak
+            MYSQL_PASSWORD: password
+volumes:
+    mysql:

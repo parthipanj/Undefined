@@ -1,0 +1,44 @@
+version: "3.7"
+services:
+  elasticsearch:
+    image: elastic/elasticsearch:7.5.2
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: any
+        delay: 1s
+        max_attempts: 3
+        window: 60s
+    volumes:
+      - type: volume
+        source: elasticsearch
+        target: /usr/share/elasticsearch/data
+    ports:
+      - target: 9200
+        published: 9400
+        protocol: tcp
+        mode: host
+      - target: 9300
+        published: 9500
+        protocol: tcp
+        mode: host
+    environment:
+      # - xpack.license.self_generated.type=basic
+      - discovery.type=single-node
+      - node.name=elasticsearch
+      - cluster.name=docker-cluster
+      # - discovery.seed_hosts=es02,es03
+      # - cluster.initial_master_nodes=elasticsearch
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    networks:
+      - elastic
+volumes:
+  elasticsearch:
+networks:
+  elastic:

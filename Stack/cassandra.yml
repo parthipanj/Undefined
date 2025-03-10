@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+  cassandra:
+    image: cassandra:3.11.5
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: any
+        delay: 1s
+        max_attempts: 3
+        window: 60s
+    volumes:
+      - type: volume
+        source: cassandra
+        target: /var/lib/cassandra
+    ports:
+      - target: 9042
+        published: 9042
+        protocol: tcp
+        mode: host
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    environment:
+      - CASSANDRA_ENABLE_USER_DEFINED_FUNCTIONS:true
+volumes:
+  cassandra:
