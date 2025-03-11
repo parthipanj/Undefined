@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:6.0.12
+    deploy:
+      replicas: 1
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - target: 27017
+        published: 27017
+        protocol: tcp
+        mode: host
+  redis-service:
+    image: redis:5.0-rc3-alpine
+    deploy:
+      replicas: 1
+    volumes:
+      - redis-data:/data
+    ports:
+      - target: 6379
+        published: 6379
+        protocol: tcp
+        mode: host
+volumes:
+  mongo-data:
+    driver: local
+  redis-data:
+    driver: local
