@@ -14,7 +14,7 @@ from product_catalog.item_family import ItemFamily
 class IntegrationTestCase(unittest.TestCase):
     skip_delete = True
     api_key = os.getenv("TEST_API_KEY")
-    site = os.getenv("TEST_SITE", "orangscape-test")
+    site = os.getenv("TEST_SITE", "")
 
     item_family_id = "KF-Red"
 
