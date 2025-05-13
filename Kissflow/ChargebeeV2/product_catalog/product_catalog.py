@@ -1,2 +1,0 @@
-class ProductCatalog:
-    pass
