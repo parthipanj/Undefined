@@ -13,7 +13,7 @@ services:
         protocol: tcp
         mode: host
   redis-service:
-    image: redis:5.0-rc3-alpine
+    image: redis:7-alpine
     deploy:
       replicas: 1
     volumes:
